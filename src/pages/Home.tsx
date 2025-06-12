@@ -1,3 +1,6 @@
+import ProjectCard from "../components/ProjectCard";
+import { projects } from "../data/projects"
+
 export default function Home() {
   return (
     <>
@@ -19,9 +22,9 @@ export default function Home() {
       <section className="w-full flex flex-col items-center">
         <h2 className="text-2xl font-semibold mb-6 text-center">Selected Projects</h2>
         <div className="grid gap-8 w-full md:grid-cols-2 lg:grid-cols-3">
-          <p className="text-gray-500 italic col-span-full text-center">
-            Project grid coming up next…
-          </p>
+          {projects.map((project) => (
+            <ProjectCard key={project.id} project={project}/>
+          ))}
         </div>
       </section>
     </>
