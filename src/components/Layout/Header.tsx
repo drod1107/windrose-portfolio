@@ -2,9 +2,11 @@ import { Link, NavLink } from "react-router-dom";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-30 bg-white/75 backdrop-blur border-b">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 flex items-center h-14">
-        <Link to="/" className="text-xl font-semibold tracking-tight">
+    <header className="relative z-30">
+      <div className="absolute inset-0 w-full h-full animate-gradient bg-gradient-to-r from-emerald-600 via-purple-700 to-sky-600 opacity-60 blur-sm" />
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 flex items-center h-14">
+       
+        <Link to="/" className="text-xl text-emerald-400 font-semibold tracking-tight">
           windrose.dev
         </Link>
 
@@ -13,7 +15,7 @@ export default function Header() {
             to="/"
             end
             className={({ isActive }) =>
-              isActive ? "font-medium text-emerald-600" : "text-gray-600 hover:text-black"
+              isActive ? "font-medium  text-emerald-400" : "text-orange-300 hover:text-black"
             }
           >
             Home
@@ -21,7 +23,7 @@ export default function Header() {
           <NavLink
             to="/about"
             className={({ isActive }) =>
-              isActive ? "font-medium text-emerald-600" : "text-gray-600 hover:text-black"
+              isActive ? "font-medium text-emerald-400" : "text-orange-300 hover:text-black"
             }
           >
             About
