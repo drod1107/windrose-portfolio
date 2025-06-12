@@ -23,7 +23,7 @@ export const projects: Project[] = [
     cover: "/whfr-image.png",
     type: "github",
     links: {
-      live: "https://github.com/drod1107/WHFR",
+      repo: "https://github.com/drod1107/WHFR",
     },
     tags: ["data-viz", "local-data", "ingestion"],
     year: 2024,
@@ -40,17 +40,5 @@ export const projects: Project[] = [
     },
     tags: ["python", "streamlit", "cybersecurity", "osint"],
     year: 2025,
-  },
-  {
-    id: "github-1",
-    title: "ThreatLens Dashboard",
-    summary: "Cyber threat intelligence dashboard powered by APIs and web scraping.",
-    cover: "/project-threatlens.png",
-    type: "github",
-    links: {
-      repo: "https://github.com/yourusername/threatlens-dashboard",
-    },
-    tags: ["security", "dashboard", "api"],
-    year: 2024,
-  },
+  }
 ];
