@@ -7,27 +7,23 @@ export default function Footer() {
             <span className="brand-mark" aria-hidden="true">✦</span>
             windrose.dev
           </span>
-          <p>Useful systems, thoughtfully built.</p>
+          <p>Software · AI · security · systems</p>
         </div>
 
         <div className="footer-links">
           <a
-            href="https://www.linkedin.com/in/davidwindrose/"
+            href="https://www.linkedin.com/in/david-windrose"
             target="_blank"
             rel="noreferrer"
           >
             LinkedIn ↗
           </a>
-          <a
-            href="https://github.com/drod1107"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://github.com/drod1107" target="_blank" rel="noreferrer">
             GitHub ↗
           </a>
         </div>
 
-        <p className="footer-meta">© {new Date().getFullYear()} David</p>
+        <p className="footer-meta">© {new Date().getFullYear()} David Rodriguez</p>
       </div>
     </footer>
   );
