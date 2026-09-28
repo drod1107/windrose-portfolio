@@ -1,28 +1,78 @@
 export default function About() {
   return (
-    <article className="prose max-w-none">
-      <h1>About Me</h1>
-      <p>
-        I build practical solutions that make a real impact. My work spans data analytics, cybersecurity, web development, and hands-on systems design. I thrive on complex challenges and bring a high-level, systems-oriented perspective to every project, but I know the details matter, and I never shy away from digging into them.
-      </p>
-      <p>
-        I’m currently pursuing a computer science degree with a focus on AI, security, and modern development. My goal is to work at the intersection of AI, Big Data, and Cyber Security to help defend users against AI misalignment and AI-empowered threats. 
-      </p> 
-      <p>I believe in direct communication, critical thinking, and meaningful outcomes over hype. Whether it’s launching a new app, streamlining a process, or helping others gain access to technology, I’m here to create things that actually work and make life better.
-      </p>
-      <section className="flex flex-col items-center justify-center py-16 w-full">
-        I'm looking for new opportunities. Let's connect!
-        <i className="fa fa-linkedin-square" aria-hidden="true">
-          <a href="https://www.linkedin.com/in/davidwindrose/" target="_blank" rel="noopener noreferrer">Connect on Linkedin</a>
-        </i>
-        <i className="fa fa-github" aria-hidden="true">
-          <a href="https://github.com/drod1107" target="_blank" rel="noopener noreferrer">Find more work on Github</a>
-        </i>
-        <i className="fa fa-envelope" aria-hidden="true">
-          <a href="mailto:80010850+drod1107@users.noreply.github.com">Send me an email</a>
-        </i>
+    <article className="about-page">
+      <header className="about-hero">
+        <p className="kicker">ABOUT / DAVID RODRIGUEZ</p>
+        <h1>I like technical work that crosses boundaries.</h1>
+        <p className="about-lede">
+          Software, security, data, AI, and operations tend to collide in the
+          systems I find most interesting. I build across those seams.
+        </p>
+      </header>
+
+      <div className="about-layout">
+        <div className="about-copy">
+          <p>
+            My work spans full-stack development, local AI systems, cybersecurity,
+            data tooling, automation, and technical operations. I tend to start by
+            mapping the system around the problem, then work inward until the
+            constraints are concrete enough to build against.
+          </p>
+          <p>
+            I am especially interested in software that has to survive real use:
+            workflows with state, integrations, operational rules, failure modes,
+            and people depending on the result.
+          </p>
+          <p>
+            AI is part of that work in two different ways. I build with it, including
+            local RAG and agent-facing tooling, and I work on the governance side,
+            where safety, policy, and human judgment matter as much as implementation.
+          </p>
+        </div>
+
+        <aside className="about-aside">
+          <span className="mono-label">CURRENT TOOLKIT</span>
+          <ul>
+            <li>JavaScript / TypeScript</li>
+            <li>React / Next.js</li>
+            <li>Python / FastAPI</li>
+            <li>SQL / PostgreSQL</li>
+            <li>Docker / local AI stacks</li>
+            <li>Security / OSINT</li>
+            <li>MCP / agent tooling</li>
+            <li>Automation / systems design</li>
+          </ul>
+        </aside>
+      </div>
+
+      <section className="contact-panel">
+        <div>
+          <p className="kicker">PROFESSIONAL LINKS</p>
+          <h2>More code and work history.</h2>
+          <p>
+            The portfolio is intentionally selective. GitHub carries more of the
+            implementation trail, and LinkedIn carries the professional chronology.
+          </p>
+        </div>
+        <div className="contact-links">
+          <a
+            className="button button-primary"
+            href="https://www.linkedin.com/in/david-windrose"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn ↗
+          </a>
+          <a
+            className="button button-secondary"
+            href="https://github.com/drod1107"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub ↗
+          </a>
+        </div>
       </section>
     </article>
-
   );
 }

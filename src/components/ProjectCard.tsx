@@ -1,61 +1,51 @@
 import type { Project } from "../data/projects";
 
-type Props = { project: Project };
+type Props = {
+  project: Project;
+  index: number;
+};
 
-export default function ProjectCard({ project }: Props) {
+export default function ProjectCard({ project, index }: Props) {
   return (
-    <div className="bg-neutral-800 rounded-2xl shadow-lg flex flex-col overflow-hidden hover:scale-[1.025] transition-transform duration-200">
-      {project.cover && (
-        <img
-          src={project.cover}
-          alt={project.title}
-          className="w-full h-40 object-cover"
-          loading="lazy"
-        />
-      )}
-      <div className="p-5 flex flex-col flex-1">
-        <h3 className="font-semibold text-lg mb-1">{project.title}</h3>
-        <p className="text-sm text-gray-400 mb-2">{project.summary}</p>
-        <div className="flex flex-wrap gap-2 mt-auto">
+    <article className="project-card">
+      <div className="project-index" aria-hidden="true">
+        0{index + 1}
+      </div>
+
+      <div className="project-card-body">
+        <div className="project-meta">
+          <span>{project.kind}</span>
+          <span>{project.year}</span>
+        </div>
+
+        <h3>{project.title}</h3>
+        <p className="project-summary">{project.summary}</p>
+        <p className="project-proof">{project.proof}</p>
+
+        <ul className="tag-list" aria-label="Technologies and topics">
+          {project.tags.map((tag) => (
+            <li key={tag}>{tag}</li>
+          ))}
+        </ul>
+
+        <div className="project-links">
           {project.links.live && (
-            <a
-              href={project.links.live}
-              className="text-emerald-400 hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Live
+            <a href={project.links.live} target="_blank" rel="noreferrer">
+              Live <span aria-hidden="true">↗</span>
             </a>
           )}
           {project.links.repo && (
-            <a
-              href={project.links.repo}
-              className="text-blue-400 hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Code
+            <a href={project.links.repo} target="_blank" rel="noreferrer">
+              Source <span aria-hidden="true">↗</span>
             </a>
           )}
           {project.links.paper && (
-            <a
-              href={project.links.paper}
-              className="text-violet-400 hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              PDF
+            <a href={project.links.paper} target="_blank" rel="noreferrer">
+              Paper <span aria-hidden="true">↗</span>
             </a>
           )}
         </div>
-        <div className="mt-3 flex flex-wrap gap-1">
-          {project.tags.map((tag) => (
-            <span key={tag} className="text-xs bg-emerald-900/70 text-emerald-300 px-2 py-0.5 rounded-full">
-              {tag}
-            </span>
-          ))}
-        </div>
       </div>
-    </div>
+    </article>
   );
 }

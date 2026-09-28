@@ -1,24 +1,30 @@
 export default function Footer() {
   return (
-    <footer className="mt-12 border-t py-6 text-center text-sm text-gray-500">
-      © {new Date().getFullYear()} windrose.dev — Built with&nbsp;
-      <a
-        href="https://vitejs.dev"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="underline hover:text-emerald-600"
-      >
-        Vite
-      </a>{" "}
-      &amp;&nbsp;
-      <a
-        href="https://tailwindcss.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="underline hover:text-emerald-600"
-      >
-        Tailwind&nbsp;CSS
-      </a>
+    <footer className="site-footer">
+      <div className="footer-inner">
+        <div>
+          <span className="brand footer-brand">
+            <span className="brand-mark" aria-hidden="true">✦</span>
+            windrose.dev
+          </span>
+          <p>Software · AI · security · systems</p>
+        </div>
+
+        <div className="footer-links">
+          <a
+            href="https://www.linkedin.com/in/david-windrose"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn ↗
+          </a>
+          <a href="https://github.com/drod1107" target="_blank" rel="noreferrer">
+            GitHub ↗
+          </a>
+        </div>
+
+        <p className="footer-meta">© {new Date().getFullYear()} David Rodriguez</p>
+      </div>
     </footer>
   );
 }
