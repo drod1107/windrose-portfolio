@@ -6,28 +6,18 @@ export default function Header() {
       <div className="header-inner">
         <Link to="/" className="brand" aria-label="windrose.dev home">
           <span className="brand-mark" aria-hidden="true">✦</span>
-          <span>windrose.dev</span>
+          <span className="brand-domain">windrose.dev</span>
+          <span className="brand-name">David Rodriguez</span>
         </Link>
 
         <nav className="site-nav" aria-label="Primary navigation">
-          <NavLink
-            to="/"
-            end
-            className={({ isActive }) => (isActive ? "active" : undefined)}
-          >
+          <NavLink to="/" end className={({ isActive }) => (isActive ? "active" : undefined)}>
             Work
           </NavLink>
-          <NavLink
-            to="/about"
-            className={({ isActive }) => (isActive ? "active" : undefined)}
-          >
+          <NavLink to="/about" className={({ isActive }) => (isActive ? "active" : undefined)}>
             About
           </NavLink>
-          <a
-            href="https://github.com/drod1107"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://github.com/drod1107" target="_blank" rel="noreferrer">
             GitHub ↗
           </a>
         </nav>
