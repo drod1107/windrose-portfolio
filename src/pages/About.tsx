@@ -2,63 +2,62 @@ export default function About() {
   return (
     <article className="about-page">
       <header className="about-hero">
-        <p className="eyebrow">About</p>
-        <h1>I’m interested in the machinery behind the outcome.</h1>
+        <p className="kicker">ABOUT / DAVID RODRIGUEZ</p>
+        <h1>I like technical work that crosses boundaries.</h1>
         <p className="about-lede">
-          I build practical systems across software, cybersecurity, AI governance,
-          data, and operations. The common thread is turning complicated work into
-          something understandable, testable, and useful.
+          Software, security, data, AI, and operations tend to collide in the
+          systems I find most interesting. I build across those seams.
         </p>
       </header>
 
       <div className="about-layout">
         <div className="about-copy">
           <p>
-            I’m a systems-oriented builder who is happiest when the problem crosses
-            boundaries. A product question can become a data problem. A security
-            problem can become a workflow problem. An AI question can become a
-            governance problem. I like following the chain until the real constraint
-            appears.
+            My work spans full-stack development, local AI systems, cybersecurity,
+            data tooling, automation, and technical operations. I tend to start by
+            mapping the system around the problem, then work inward until the
+            constraints are concrete enough to build against.
           </p>
           <p>
-            My background spans software development, program leadership,
-            cybersecurity, analytics, and hands-on business systems. I care about
-            direct communication, evidence, maintainability, and work that survives
-            contact with the real world.
+            I am especially interested in software that has to survive real use:
+            workflows with state, integrations, operational rules, failure modes,
+            and people depending on the result.
           </p>
           <p>
-            I’m especially interested in responsible AI, security, automation, and
-            tools that give people more capability without adding more complexity.
+            AI is part of that work in two different ways. I build with it, including
+            local RAG and agent-facing tooling, and I work on the governance side,
+            where safety, policy, and human judgment matter as much as implementation.
           </p>
         </div>
 
         <aside className="about-aside">
-          <p className="aside-label">Current toolkit</p>
+          <span className="mono-label">CURRENT TOOLKIT</span>
           <ul>
             <li>JavaScript / TypeScript</li>
             <li>React / Next.js</li>
             <li>Python / FastAPI</li>
-            <li>SQL / Postgres</li>
-            <li>Security & OSINT</li>
-            <li>AI policy & governance</li>
-            <li>Automation & systems design</li>
+            <li>SQL / PostgreSQL</li>
+            <li>Docker / local AI stacks</li>
+            <li>Security / OSINT</li>
+            <li>MCP / agent tooling</li>
+            <li>Automation / systems design</li>
           </ul>
         </aside>
       </div>
 
       <section className="contact-panel">
         <div>
-          <p className="eyebrow">Connect</p>
-          <h2>Useful problem? I’m listening.</h2>
+          <p className="kicker">PROFESSIONAL LINKS</p>
+          <h2>More code and work history.</h2>
           <p>
-            I’m always interested in thoughtful technical work, collaboration, and
-            conversations about systems that deserve to be better.
+            The portfolio is intentionally selective. GitHub carries more of the
+            implementation trail, and LinkedIn carries the professional chronology.
           </p>
         </div>
         <div className="contact-links">
           <a
             className="button button-primary"
-            href="https://www.linkedin.com/in/davidwindrose/"
+            href="https://www.linkedin.com/in/david-windrose"
             target="_blank"
             rel="noreferrer"
           >
