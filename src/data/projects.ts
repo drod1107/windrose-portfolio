@@ -63,12 +63,12 @@ export const projects: Project[] = [
     summary:
       "Applied AI-safety work for parents, educators, and schools, combining original research, practical governance work, public resources, and a production web platform.",
     proof:
-      "Includes a 60+ page first-edition AI-safety report, school-facing policy work, resource publishing, and a Next.js/TypeScript content platform.",
+      "Includes a 60+ page first-edition AI-safety report, school-facing policy work, resource publishing, and a public education platform.",
     kind: "AI governance + research",
     links: {
       live: "https://ai.windrose.dev",
     },
-    tags: ["AI safety", "governance", "Next.js", "TypeScript", "research", "policy"],
+    tags: ["AI safety", "governance", "research", "policy", "public education"],
     year: 2025,
   },
 ];
