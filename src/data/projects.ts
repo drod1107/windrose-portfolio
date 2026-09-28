@@ -1,11 +1,9 @@
-// src/data/projects.ts
-
 export interface Project {
   id: string;
   title: string;
   summary: string;
-  cover?: string; // image URL or undefined
-  type: "tableau" | "streamlit" | "whitepaper" | "webapp" | "github";
+  proof: string;
+  kind: string;
   links: {
     live?: string;
     repo?: string;
@@ -16,43 +14,61 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-    {
-    id: "aisafety",  // unique ID for the project (used as React key)
-    title: "The State of AI Safety for Parents and Educators 2025",
-    summary: "A first-edition research report exploring the state of AI safety in education and its impact on students, parents, and teachers.",
-    cover: "/ai_safely.png",
-    type: "whitepaper",
+  {
+    id: "wintergarten-ops",
+    title: "Wintergarten Operations Platform",
+    summary:
+      "A production operating system for a small retail food business, spanning the public storefront and the workflows behind orders, inventory, production, fulfillment, customer events, and communications.",
+    proof:
+      "Built as a real operational system rather than a demo: Next.js and TypeScript on Postgres with Stripe, costing and inventory logic, automation, MCP tooling, and a broad verification suite.",
+    kind: "Production full-stack system",
     links: {
-      live: "https://ai.windrose.dev",
-      // If a PDF report is available, you can add a paper link as well, for example:
-      // paper: "https://ai.windrose.dev/State-of-AI-Safety-2025.pdf"
+      live: "https://derwintergarten.com",
     },
-    tags: ["ai-safety", "education", "research"],
-    year: 2025,
+    tags: ["Next.js", "TypeScript", "Postgres", "Stripe", "MCP", "automation"],
+    year: 2026,
   },
   {
     id: "whfr",
-    title: "What Happened For Real - A Fully Local Data Ingestion Tool",
-    summary: "A comprehensive tool for ingesting and processing local data files.",
-    cover: "/whfr-image.png",
-    type: "github",
+    title: "WHFR · Local RAG + OCR Stack",
+    summary:
+      "A local-first document intelligence stack for ingesting scanned and structured files, indexing them, and querying the resulting corpus without sending the source material to a hosted LLM.",
+    proof:
+      "Dockerized services combine FastAPI, OCR, Apache Tika, ChromaDB, checkpointed ingestion, Ollama, and a dedicated RAG API.",
+    kind: "AI systems prototype",
     links: {
       repo: "https://github.com/drod1107/WHFR",
     },
-    tags: ["data-viz", "local-data", "ingestion"],
-    year: 2024,
+    tags: ["Python", "FastAPI", "Docker", "RAG", "OCR", "ChromaDB"],
+    year: 2025,
   },
   {
     id: "threatmap",
-    title: "Threatmap Global Cyber OSINT Dashboard",
-    summary: "A global cyber threat intelligence dashboard using OSINT data.",
-    cover: "/threatmap-image.png",
-    type: "streamlit",
+    title: "ThreatMap · Cyber Threat Intelligence",
+    summary:
+      "An interactive threat-intelligence dashboard that normalizes public IOC data, enriches malicious infrastructure, and turns it into drill-down investigation views and global visualizations.",
+    proof:
+      "Python and Streamlit application with AlienVault OTX ingestion, enrichment, caching, pandas pipelines, and Plotly geospatial visualization.",
+    kind: "Cybersecurity + data",
     links: {
       live: "https://threatmap.streamlit.app",
       repo: "https://github.com/drod1107/threatmap",
     },
-    tags: ["python", "streamlit", "cybersecurity", "osint"],
+    tags: ["Python", "Streamlit", "OSINT", "pandas", "Plotly", "threat intel"],
     year: 2025,
-  }
+  },
+  {
+    id: "ai-safely",
+    title: "AI Safely · Research + Public Platform",
+    summary:
+      "Applied AI-safety work for parents, educators, and schools, combining original research, practical governance work, public resources, and a production web platform.",
+    proof:
+      "Includes a 60+ page first-edition AI-safety report, school-facing policy work, resource publishing, and a Next.js/TypeScript content platform.",
+    kind: "AI governance + research",
+    links: {
+      live: "https://ai.windrose.dev",
+    },
+    tags: ["AI safety", "governance", "Next.js", "TypeScript", "research", "policy"],
+    year: 2025,
+  },
 ];
